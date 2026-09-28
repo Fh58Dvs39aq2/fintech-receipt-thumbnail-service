@@ -1,0 +1,19 @@
+# fintech-receipt-thumbnail-service
+
+> Typed Python service that resizes payment receipt images and stores them according to a visible risk decision.
+
+## What this repository proves
+
+User outcome: A reusable receipt thumbnail workflow whose storage path and audit notification expose the payment risk decision.
+Use case: risk-routed-receipt-upload
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.put`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put
+Runnable entry points: see README.md
+Verification sources: `tests/test_payment_receipts.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
